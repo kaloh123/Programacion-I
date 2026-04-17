@@ -1,3 +1,5 @@
+# SISTEMA DE CONTROL DE INVENTARIO
+
 herramientas = []
 existencias = []
 
@@ -34,8 +36,8 @@ while True:
 
         for cant in range(1, cant_herramientas + 1):
             herramienta = input(f"Ingrese la {cant} herramienta: ")
-            while herramienta.upper() in herramientas or herramienta == "":
-                print(f"Error! {herramienta} la herramienta ya está cargada o dejó el espacio vacio")
+            while herramienta.upper() in herramientas or herramienta == "" or not herramienta.isalpha():
+                print(f"Error! {herramienta} la herramienta ya está cargada o dejó el espacio vacio o no ingresó una herramienta válida")
                 herramienta = input(f"Por favor, ingrese una herramienta diferente: ")
 
             herramientas.append(herramienta.upper())
